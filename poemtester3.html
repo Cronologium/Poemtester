@@ -1,0 +1,589 @@
+<html>
+    <head>
+        <title>
+            Schela v3.1
+        </title>
+        <meta http-equiv="Content-Type" content = "text/html; charset=utf-8" />
+        <script>
+            var tutorial = 'Utilizeaza meniul de sus pentru a incepe testul.<br> <br>Introdu numarul de intrebari dorite apoi apasa pe "Antrenament" <br> pentru a raspunde la un numar dorit de intrebari. <br> <br>Apasa pe butonul "Test" pentru a incepe un test cu 30 de <br> intrebari, fiecare poezie aparand o singura data';
+            var p = new Array();
+            p[0] =  "Poezia 1";
+            p[1] =  "Poezia 2";
+            p[2] =  "Poezia 3";
+            p[3] =  "Poezia 4";
+            p[4] =  "Poezia 5";
+            p[5] =  "Poezia 6";
+            p[6] =  "Poezia 7";
+            p[7] =  "Poezia 8";
+            p[8] =  "Poezia 9";
+            p[9] =  "Poezia 10";
+            p[10] = "Poezia 11";
+            p[11] = "Poezia 12";
+            p[12] = "Poezia 13";
+            p[13] = "Poezia 14";
+            p[14] = "Poezia 15";
+            p[15] = "Poezia 16";
+            p[16] = "Poezia 17";
+            p[17] = "Poezia 18";
+            p[18] = "Poezia 19";
+            p[19] = "Poezia 20";
+            p[20] = "Poezia 21";
+            p[21] = "Poezia 22";
+            p[22] = "Poezia 23";
+            p[23] = "Poezia 24";
+            p[24] = "Poezia 25";
+            p[25] = "Poezia 26";
+            p[26] = "Poezia 27";
+            p[27] = "Poezia 28";
+            p[28] = "Poezia 29";
+            p[29] = "Poezia 30";
+            var btnlist = new Array();
+            btnlist[0] = "id1";
+            btnlist[1] = "id2";
+            btnlist[2] = "id3";
+            btnlist[3] = "id4";
+            btnlist[4] = "id5";
+            btnlist[5] = "id6";
+            btnlist[6] = "id7";
+            btnlist[7] = "id8";
+            btnlist[8] = "id9";
+            btnlist[9] = "id10";
+            btnlist[10] = "id11";
+            btnlist[11] = "id12";
+            btnlist[12] = "id13";
+            btnlist[13] = "id14";
+            btnlist[14] = "id15";
+            btnlist[15] = "id16";
+            btnlist[16] = "id17";
+            btnlist[17] = "id18";
+            btnlist[18] = "id19";
+            btnlist[19] = "id20";
+            btnlist[20] = "id21";
+            btnlist[21] = "id22";
+            btnlist[22] = "id23";
+            btnlist[23] = "id24";
+            btnlist[24] = "id25";
+            btnlist[25] = "id26";
+            btnlist[26] = "id27";
+            btnlist[27] = "id28";
+            btnlist[28] = "id29";
+            btnlist[29] = "id30";
+            var s = new Array();
+            s[0]  = "Citat din <br> poezia 1";
+            s[1]  = "Citat din <br> poezia 2";
+            s[2]  = "Citat din <br> poezia 3";
+            s[3]  = "Citat din <br> poezia 4";
+            s[4]  = "Citat din <br> poezia 5";
+            s[5]  = "Citat din <br> poezia 6";
+            s[6]  = "Citat din <br> poezia 7";
+            s[7]  = "Citat din <br> poezia 8";
+            s[8]  = "Citat din <br> poezia 9"; 
+            s[9]  = "Citat din <br> poezia 10";
+            s[10] = "Citat din <br> poezia 11";
+            s[11] = "Citat din <br> poezia 12";
+            s[12] = "Citat din <br> poezia 13";
+            s[13] = "Citat din <br> poezia 14";
+            s[14] = "Citat din <br> poezia 15";
+            s[15] = "Citat din <br> poezia 16";
+            s[16] = "Citat din <br> poezia 17";
+            s[17] = "Citat din <br> poezia 18";
+            s[18] = "Citat din <br> poezia 19";
+            s[19] = "Citat din <br> poezia 20";
+            s[20] = "Citat din <br> poezia 21";
+            s[21] = "Citat din <br> poezia 22";
+            s[22] = "Citat din <br> poezia 23";
+            s[23] = "Citat din <br> poezia 24";
+            s[24] = "Citat din <br> poezia 25";
+            s[25] = "Citat din <br> poezia 26";
+            s[26] = "Citat din <br> poezia 27";
+            s[27] = "Citat din <br> poezia 28";
+            s[28] = "Citat din <br> poezia 29";
+            s[29] = "Citat din <br> poezia 30";
+            var ans = new Array();
+            ans[0] = 1
+            ans[1] = 2
+            ans[2] = 3
+            ans[3] = 4
+            ans[4] = 5
+            ans[5] = 6
+            ans[6] = 7
+            ans[7] = 8 
+            ans[8] = 9
+            ans[9] = 10
+            ans[10] = 11
+            ans[11] = 12
+            ans[12] = 13
+            ans[13] = 14
+            ans[14] = 15
+            ans[15] = 16
+            ans[16] = 17
+            ans[17] = 18
+            ans[18] = 19
+            ans[19] = 20
+            ans[20] = 21
+            ans[21] = 22
+            ans[22] = 23
+            ans[23] = 24
+            ans[24] = 25
+            ans[25] = 26
+            ans[26] = 27
+            ans[27] = 28
+            ans[28] = 29
+            ans[29] = 30;
+            var now = 0, start = false, correct = 0, qnr, qans = new Array(), qstring = new Array(), viz = new Array(), maxs = 30, testtype = 0, lockdownmode = false;
+            var highlight = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+            function initiatebuttons() {
+                for (i = 0; i < 30; ++i) {
+                    document.getElementById(btnlist[i]).innerHTML = p[i];
+                    highlight[i+1] = 0;
+                }
+                document.getElementById("right_nav").className = 'show';
+                document.getElementById("deblocare").innerHTML = "Sari peste";
+                document.getElementById("deblocare").className = 'show';
+                start = true;
+                now = correct = 0;
+                lockdownmode = false;
+            }
+            function stopbuttons() {
+                start = false;
+                viz = [];
+                qstring = [];
+                qans = [];
+                testtype = 0;
+                document.getElementById("questionarea").innerHTML = tutorial;
+                document.getElementById("deblocare").innerHTML = "";
+                for (i = 0; i < 30; ++i) {
+                    document.getElementById(btnlist[i]).className = 'neutral';
+                    highlight[i+1] = 0;
+                }
+                document.getElementById("right_nav").className = 'hide';
+                document.getElementById("deblocare").className = 'hide';
+                lockdownmode = false;
+            }
+            function write_new_question() {
+                document.getElementById("questionarea").innerHTML = (now + 1) + ".<br>" + qstring[now];
+            }
+            function write(s) {
+                document.getElementById("questionarea").innerHTML = (now + 1) + ".<br>" + s;
+            }
+            function train() {
+                if (start == true) {
+                    alert("Termina testul curent mai intai");
+                    return;
+                }
+                testtype = 1;
+                qnr = document.getElementById("trainbutton").value;
+                if (qnr < 1) {
+                    alert("Numarul de intrebari trebuie sa fie mai mare ca 0!");
+                    return;
+                }
+                if (qnr > maxs) {
+                    alert("Numarul de intrebari va fi redus automat la " + maxs + " deoarece nu s-au putut gasi " + qnr + " intrebari!");
+                    qnr = maxs;
+                }
+                initiatebuttons();
+                for (i = 0; i < qnr; ++i) {
+                    viz[i] = false;
+                }
+                limit = 10000 / maxs * maxs;
+                for (i = 0; i < qnr; ++i) {
+                    r = parseInt(Math.random() * 10000);
+                    while (r >= limit || viz[r % maxs] == true)
+                        r = parseInt(Math.random() * 10000);
+                    r = parseInt(r % maxs);
+                    qstring[i] = s[r];
+                    qans[i] = ans[r];
+                    viz[r] = true;
+                }
+                write_new_question();
+            }
+            function test() {
+                if (start == true) {
+                    alert("Termina testul curent mai intai");
+                    return;
+                }
+                testtype = 2;
+                initiatebuttons();
+                qnr = 30;
+                for (i = 0; i < 30; ++i) {
+                    viz[i] = false;
+                }
+                limit = 10000 / maxs * maxs;
+                for (i = 0; i < qnr; ++i) {
+                    r = parseInt((Math.random() * 10000) % maxs);
+                    while (r >= limit || viz[ans[r] - 1] == true)
+                        r = parseInt((Math.random() * 10000) % maxs);
+                    qstring[i] = s[r];
+                    qans[i] = ans[r];
+                    viz[ans[r]-1] = true;
+                }
+                write_new_question();
+            }
+            function redobuttoncolor() {
+                for (i = 0; i < 30; ++i) {
+                    document.getElementById(btnlist[i]).className = 'neutral';
+                    highlight[i+1] = 0;
+                }
+            }
+            function check(x) {
+                if (highlight[x]) {
+                    return;
+                }
+                if (lockdownmode == true) {
+                    return;
+                }
+                if (start == false) 
+                    return;
+                else {
+                    if (x == qans[now]) {
+                        correct++;
+                        document.getElementById(btnlist[x-1]).className = 'correct';
+                        highlight[x] = 1;
+                    }
+                    else {
+                        if (testtype == 2) {
+                            document.getElementById(btnlist[qans[now]-1]).className = 'wrong';
+                            highlight[qans[now]] = 1;
+                        }
+                        if (testtype == 1) {
+                            document.getElementById(btnlist[qans[now]-1]).className = 'correct';
+                            document.getElementById(btnlist[x-1]).className = 'wrong';
+                            highlight[x] = 1;
+                            highlight[qans[now]] = 1;
+                        }
+                    }
+                    now++;
+                    lockdownmode = true;
+                    document.getElementById("deblocare").innerHTML = "Urmatoarea intrebare";
+                }
+                
+            }
+            function unlock() {
+                if (start == false) {
+                    return;
+                }
+                if (lockdownmode == true) {
+                    if (testtype == 1) {
+                        redobuttoncolor();
+                    }
+                    if (testtype == 2) {
+                        for (i = 0; i < 30; ++i) {
+                            if (!highlight[i+1]) {
+                                document.getElementById("id" + (i + 1)).className = 'neutral';
+                            }
+                        }
+                    }
+                    lockdownmode = false;
+                    if (now == qnr) {
+                        stopbuttons();
+                        alert("Ai obtinut " + (10 + parseInt(90 / qnr * correct)) + " puncte");
+                    }
+                    if (now < qnr) {
+                        write_new_question();
+                        document.getElementById("deblocare").innerHTML = "Sari peste";
+                    }
+                }
+                else {
+                    qstring[qnr] = qstring[now];
+                    qans[qnr] = qans[now];
+                    for (i = now; i < qnr; ++i) {
+                        qstring[i] = qstring[i+1];
+                        qans[i] = qans[i+1];
+                    }
+                    qstring[qnr] = "";
+                    qans[qnr] = "";
+                    write_new_question();
+                }
+            }
+            function stop() {
+                if (start == true)
+                    stopbuttons();                
+            }
+            function checkforanimation(ID, CLASS) {
+                if (!highlight[ID] && !lockdownmode) {
+                    animation("id" + ID, CLASS);
+                }                
+            }
+            function animation(ID, CLASS) {
+                document.getElementById(ID).className = CLASS;
+            }
+        </script>
+        <style>
+            body {
+                background-image: url("Carte.jpg");
+                background-attachment: fixed;
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+            }
+            #nav {
+                display: block;
+                list-style-type: none;
+                margin: 0;
+            }
+            #nav li {
+                display: inline;
+            }
+            #nav li input {
+                width: 50px;
+                background-color: rgba(255, 255, 255, 0.5);
+                border: none;
+                padding-left: 3px;
+            }
+            #nav li button {
+                background-color: transparent;
+                border: solid 1px transparent;
+                border-radius: 3px;
+                font: 15px arial;
+                font-variant: small-caps;
+                color: #FFF;
+                margin: 5px;
+                padding: 10px;
+                transition-property: color, border-color, background-color;
+                transition-duration: 0.5s;
+                transition-timing-function: ease-in-out;
+            }
+            #nav li button.onhover {
+                background-color: rgba(155, 155, 155, 0.9);
+                border: solid 1px white;
+                cursor: pointer;
+            }
+            #nav li button.neutral {
+                background-color: transparent;
+                border: solid 1px transparent;                
+            }
+            #right_nav.hide {
+                display: none;
+            }
+            #right_nav.show {
+                display: inline;
+            }
+            #right_nav {
+                list-style-type: none;
+                display: inline;
+                position: absolute;
+                top: 5px;
+                right: 5px;
+            }
+            #right_nav li button.correct {
+                background-color: rgba(0, 75, 0, 0.5);
+                border: solid 1px green;
+            }
+            #right_nav li button.wrong {
+                background-color: rgba(155, 0, 0, 0.5);
+                border: solid 1px red;
+            }
+            #right_nav li button.neutral {
+                background-color: transparent;
+                border: solid 1px transparent;
+            }
+            #right_nav li {
+                margin-bottom: 0.2vh;
+                display: block;
+            }
+            #right_nav li button {
+                width: 15vw;
+                text-align: right;
+                background-color: transparent;
+                border: solid 1px transparent;
+                font: 2vh verdana, sans-serif;
+                font-variant: small-caps;
+                color: #FFF;
+                padding: 0;
+                padding-right: 0.2vw;
+                transition-property: color, border-color, background-color;
+                transition-duration: 1s;
+                transition-timing-function: ease-in-out;
+            }
+            #right_nav li button.onhover {
+                background-color: rgba(155, 155, 155, 0.9);
+                border: solid 1px white;
+                cursor: pointer;
+            }
+            #next {
+                text-align: center;
+            }
+            #deblocare {
+                background-color: transparent;
+                font: 1vw verdana, sans-serif;
+                font-variant: small-caps;
+                border: solid 1px transparent;
+                margin-top: 2.6vh;
+                padding: 0.5vh;
+                color: #FFF;
+                transition-property: color, border-color, background-color;
+                transition-duration: 1s;
+                transition-timing-function: ease-in-out;                
+            }
+            #deblocare.show {
+                display: inline;
+            }
+            #deblocare.hide {
+                display: none;
+            }
+            #deblocare:hover {
+                background-color: rgba(155, 155, 155, 0.9);
+                border: solid 1px white;
+            }
+            #questionbox {
+                height: 35vh;
+            }
+            #questionarea {
+                text-align: center;
+                padding-top: 50px;
+                color: #FFF;
+                font: 3vh verdana, sans-serif;
+                font-variant: small-caps;
+                font-style: italic;
+            }
+            #bottombar {
+                position: fixed;
+                bottom: 10px;
+                list-style-type: none;
+                border-radius: 10px;
+                padding: 10px;
+                margin: 0;
+            }
+            #bottombar li {
+                display: inline;
+                padding-right: 5px;
+            }
+            #copyright {
+                display: inline;
+                color: #FFF;
+                font-variant: small-caps;
+                font: 1.5vh verdana, sans-serif;
+            }
+            #bottombar li a img {
+                height: 1.6vh;
+            }
+        </style>
+    </head>
+    <body>
+        <ul id = "nav">
+            <li>
+                <input type = "number" value = "30" id = "trainbutton">
+                <button id = "training" type = "button" onmouseover = "animation(id, 'onhover')" onmouseout = "animation('training', 'neutral')" onclick = "train()">Antrenament</button>
+            </li>
+            <li>
+                <button id = "testing" type = "button" onmouseover = "animation(id, 'onhover')" onmouseout = "animation('testing', 'neutral')" onclick = "test()">Test</button>
+            </li>
+            <li>
+                <button id = "cancel" type = "button" onmouseover = "animation(id, 'onhover')" onmouseout = "animation('cancel', 'neutral')" onclick = "stop()">Intrerupe</button>
+            </li>
+        </ul>
+        <ul id = "right_nav">
+            <li>
+                <button type = "button" id = "id1" onmouseover = "checkforanimation(1, 'onhover')" onmouseout = "checkforanimation(1, 'neutral')" onclick = "check(1)"></button>
+            </li>
+            <li>
+                <button type = "button" id = "id2" onmouseover = "checkforanimation(2, 'onhover')" onmouseout = "checkforanimation(2, 'neutral')" onclick = "check(2)"></button>
+            </li>
+            <li>
+                <button type = "button" id = "id3" onmouseover = "checkforanimation(3, 'onhover')" onmouseout = "checkforanimation(3, 'neutral')" onclick = "check(3)"></button>
+            </li>
+            <li>
+                <button type = "button" id = "id4" onmouseover = "checkforanimation(4, 'onhover')" onmouseout = "checkforanimation(4, 'neutral')" onclick = "check(4)"></button>
+            </li>
+            <li>
+                <button type = "button" id = "id5" onmouseover = "checkforanimation(5, 'onhover')" onmouseout = "checkforanimation(5, 'neutral')" onclick = "check(5)"></button>
+            </li>
+            <li>
+                <button type = "button" id = "id6" onmouseover = "checkforanimation(6, 'onhover')" onmouseout = "checkforanimation(6, 'neutral')" onclick = "check(6)"></button>
+            </li>
+            <li>
+                <button type = "button" id = "id7" onmouseover = "checkforanimation(7, 'onhover')" onmouseout = "checkforanimation(7, 'neutral')" onclick = "check(7)"></button>
+            </li>
+            <li>
+                <button type = "button" id = "id8" onmouseover = "checkforanimation(8, 'onhover')" onmouseout = "checkforanimation(8, 'neutral')" onclick = "check(8)"></button>
+            </li>
+            <li>
+                <button type = "button" id = "id9" onmouseover = "checkforanimation(9, 'onhover')" onmouseout = "checkforanimation(9, 'neutral')" onclick = "check(9)"></button>
+            </li>
+            <li>
+                <button type = "button" id = "id10" onmouseover = "checkforanimation(10, 'onhover')" onmouseout = "checkforanimation(10, 'neutral')" onclick = "check(10)"></button>
+            </li>
+            <li>
+                <button type = "button" id = "id11" onmouseover = "checkforanimation(11, 'onhover')" onmouseout = "checkforanimation(11, 'neutral')" onclick = "check(11)"></button>
+            </li>
+            <li>
+                <button type = "button" id = "id12" onmouseover = "checkforanimation(12, 'onhover')" onmouseout = "checkforanimation(12, 'neutral')" onclick = "check(12)"></button>
+            </li>
+            <li>
+                <button type = "button" id = "id13" onmouseover = "checkforanimation(13, 'onhover')" onmouseout = "checkforanimation(13, 'neutral')" onclick = "check(13)"></button>
+            </li>
+            <li>
+                <button type = "button" id = "id14" onmouseover = "checkforanimation(14, 'onhover')" onmouseout = "checkforanimation(14, 'neutral')" onclick = "check(14)"></button>
+            </li>
+            <li>
+                <button type = "button" id = "id15" onmouseover = "checkforanimation(15, 'onhover')" onmouseout = "checkforanimation(15, 'neutral')" onclick = "check(15)"></button>
+            </li>
+            <li>
+                <button type = "button" id = "id16" onmouseover = "checkforanimation(16, 'onhover')" onmouseout = "checkforanimation(16, 'neutral')" onclick = "check(16)"></button>
+            </li>
+            <li>
+                <button type = "button" id = "id17" onmouseover = "checkforanimation(17, 'onhover')" onmouseout = "checkforanimation(17, 'neutral')" onclick = "check(17)"></button>
+            </li>
+            <li>
+                <button type = "button" id = "id18" onmouseover = "checkforanimation(18, 'onhover')" onmouseout = "checkforanimation(18, 'neutral')" onclick = "check(18)"></button>
+            </li>
+            <li>
+                <button type = "button" id = "id19" onmouseover = "checkforanimation(19, 'onhover')" onmouseout = "checkforanimation(19, 'neutral')" onclick = "check(19)"></button>
+            </li>
+            <li>
+                <button type = "button" id = "id20" onmouseover = "checkforanimation(20, 'onhover')" onmouseout = "checkforanimation(20, 'neutral')" onclick = "check(20)"></button>
+            </li>
+            <li>
+                <button type = "button" id = "id21" onmouseover = "checkforanimation(21, 'onhover')" onmouseout = "checkforanimation(21, 'neutral')" onclick = "check(21)"></button>
+            </li>
+            <li>
+                <button type = "button" id = "id22" onmouseover = "checkforanimation(22, 'onhover')" onmouseout = "checkforanimation(22, 'neutral')" onclick = "check(22)"></button>
+            </li>
+            <li>
+                <button type = "button" id = "id23" onmouseover = "checkforanimation(23, 'onhover')" onmouseout = "checkforanimation(23, 'neutral')" onclick = "check(23)"></button>
+            </li>
+            <li>
+                <button type = "button" id = "id24" onmouseover = "checkforanimation(24, 'onhover')" onmouseout = "checkforanimation(24, 'neutral')" onclick = "check(24)"></button>
+            </li>
+            <li>
+                <button type = "button" id = "id25" onmouseover = "checkforanimation(25, 'onhover')" onmouseout = "checkforanimation(25, 'neutral')" onclick = "check(25)"></button>
+            </li>
+            <li>
+                <button type = "button" id = "id26" onmouseover = "checkforanimation(26, 'onhover')" onmouseout = "checkforanimation(26, 'neutral')" onclick = "check(26)"></button>
+            </li>
+            <li>
+                <button type = "button" id = "id27" onmouseover = "checkforanimation(27, 'onhover')" onmouseout = "checkforanimation(27, 'neutral')" onclick = "check(27)"></button>
+            </li>
+            <li>
+                <button type = "button" id = "id28" onmouseover = "checkforanimation(28, 'onhover')" onmouseout = "checkforanimation(28, 'neutral')" onclick = "check(28)"></button>
+            </li>
+            <li>
+                <button type = "button" id = "id29" onmouseover = "checkforanimation(29, 'onhover')" onmouseout = "checkforanimation(29, 'neutral')" onclick = "check(29)"></button>
+            </li>
+            <li>
+                <button type = "button" id = "id30" onmouseover = "checkforanimation(30, 'onhover')" onmouseout = "checkforanimation(30, 'neutral')" onclick = "check(30)"></button>
+            </li>
+        </ul>
+        <div id = "questionbox">
+            <p id = "questionarea">
+                Utilizeaza meniul de sus pentru a incepe testul.<br> <br>
+                Introdu numarul de intrebari dorite apoi apasa pe "Antrenament" <br> pentru a raspunde la un numar dorit de intrebari. <br> <br>
+                Apasa pe butonul "Test" pentru a incepe un test cu 30 de <br> intrebari, fiecare poezie aparand o singura data
+            </p>
+        </div>
+        <div id = "next">
+            <button type = "button" id = "deblocare" onclick = "unlock()"></button>
+        </div>
+        <ul id = "bottombar">
+            <li>
+               <a href = "https://www.facebook.com/tudor.varan"><img title = "Tudor Varan" src = "facebook.png"></a>
+            </li>
+            <li>
+                <a href = "mailto:tudor.varan@yahoo.com"><img title = "tudor.varan@yahoo.com" src = "mail.png"></a>
+            </li>
+            <li>
+                <p id= "copyright">Copyright ©2014 by Tudor Varan</p>
+            </li>
+        </ul>
+        
+    </body>
+</html>
